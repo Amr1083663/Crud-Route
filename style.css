@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(186, 241, 241);
+}
+
+.inline-80 {
+    display: inline-block; 
+    width: 80px;
+}
+
+
+input{
+    margin-bottom: 1rem;
+}
+
+
+#update{
+    display: none;
+}
+
+#noContent{
+    color: rgb(77, 77, 77);
+    padding: 1rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    background-color: bisque;
+    text-align: center;
+}
+
+.pAddedProduct{
+    color: rgb(12, 194, 36);
+}
+
+.InvalidpAddedProduct{
+        color: rgb(171, 31, 31);
+    ;
+}
+
+table{
+    text-align: start;
+}
+
+
+
+.suuccessdiv{
+    width: 60%;
+    height: 10vh;
+    text-align: center;
+    background-color: rgb(211, 239, 204);
+    color: rgb(0, 164, 0);
+    /* top: 50%; */
+    border-radius: 15px 0;
+    z-index: 2;
+    /* position: fixed; */
+    left: 0%;
+
+}
+
+#validname  ,
+#valideprice ,
+#validtype 
+{
+    color: rgb(171, 31, 31);
+}
+
+.sureDelete{
+    width: 60%;
+    height: 20vh;
+    background-color: blueviolet;
+}
+
+
+@media only screen and (max-width: 600px) {
+    table {
+    }
+  }

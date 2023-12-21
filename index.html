@@ -1,0 +1,128 @@
+<!doctype html><html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="bootstrap.min.css">
+
+	
+	<title> C R U D</title>
+	<link rel="stylesheet" href="style.css">
+	
+	<style>
+	
+	</style>
+</head>
+<body>
+
+	<h1 class="text-center my-3  fw-bold">CRUD</h1>
+	<div>
+		&nbsp;
+	</div>
+	
+	
+	<div class="container" id="new-entry">
+		<!-- <h3 class="mb-3">New Entry</h3> -->
+		<form>
+			<div class="form-group">
+				<label class="inline-80 fw-semibold ">product</label> &nbsp;
+				<input type="text" id="product" class="" oninput="validation()"   placeholder="Product Name" required  value=""/>
+				<span id="validname" class="validMessage mt-0"></span>
+
+			</div>
+			<div class="form-group">
+				<label class="inline-80 fw-semibold">price</label> &nbsp;
+				<input type="text" id="price" oninput="validation()" required placeholder="Price In EGP" value=""/>
+				<span id="valideprice" class="validMessage mt-0"></span>
+
+			</div>
+			<div class="form-group">
+				<label class="inline-80 fw-semibold">type</label> &nbsp;
+				<input type="text" required id="type" oninput="validation()" value=""  placeholder="mobile or screen"/>
+				<span id="validtype" class="validMessage mt-0"></span>
+
+			</div>
+			<div class="d-flex align-items-center">
+				<input type="submit" id="submit" onclick=" Refresh()"   value="Add product" class="btn btn-dark btn-sm me-3"  />
+
+				<div id="suuccessdiv" class="suuccessdiv d-none   px-2 mb-1">
+					<p class=" " >The product has been added successfully ! </p>
+					
+
+				</div>
+				<div id="updatesuccees" class="updatesuccees d-none   px-2 mb-1">
+					<p class=" " >The product has been Updated successfully ! </p>
+
+				</div>
+
+
+				<p class="d-none InvalidpAddedProduct" >Invalid Data ! </p>
+
+
+			</div>
+			<!-- <input type="submit" id="update"  value="Update All" class="btn   btn-" /> -->
+			
+		</form>
+	</div>
+
+	<div class="container">
+		<label class="inline-80 fw-semibold">search</label> &nbsp;
+	<input
+	oninput="searchproduct()"
+	placeholder="search by product"
+
+
+	type="text"
+	 id="searchproduct"    
+
+	
+	value="" />
+	</div>
+
+
+
+	
+	<div class="container" id="listing">
+		<h3>Listing</h3>
+		<table class="table table-hover ">
+			<thead>
+				<tr> 
+					<th>Index</th>
+					<th>product</th>
+					<th>price</th>
+					<th>type</th>
+
+					<th>Delete</th>
+					<th>Update</th>
+
+					<!-- <th>Actions</th> -->
+				</tr>
+
+				
+			</thead>
+			<tbody id="products">
+
+				
+			</tbody>
+
+		</table>  <div>
+			
+		</div>
+
+		<button onclick="DeleteAll()"   class="w-100 btn delallbtn   d-block my-5 btn-dark">Delete All products</button>
+
+		<p id="noContent" class="d-none nocontent "> No  product  is  available  at  moment</p>
+
+	</div>
+	
+	
+
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
